@@ -12,17 +12,12 @@ export default async function HomePage() {
         >
           Admin
         </Link>
-      </div>
-
-      <div className="w-full max-w-md space-y-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-            {rootDomain}
-          </h1>
-          <p className="mt-3 text-lg text-gray-600">
-            Create your own subdomain with a custom emoji
-          </p>
-        </div>
+      <section className="flex flex-col items-center justify-center py-16 gap-8">
+        <img src="https://fieeuncp.edu.pe/wp-content/uploads/2022/09/logo-fiee-uncp.png" alt="Logo FIEE UNCP" className="w-40 h-40 object-contain mb-4" />
+        <h1 className="text-4xl md:text-5xl font-extrabold text-[var(--primary)] text-center mb-2">Facultad de Ingeniería Eléctrica</h1>
+        <h2 className="text-2xl md:text-3xl font-semibold text-[var(--secondary)] text-center mb-4">Universidad Nacional del Centro del Perú</h2>
+        <p className="text-lg md:text-xl text-center max-w-2xl">Bienvenido al portal institucional de la FIEE-UNCP. Aquí encontrarás información relevante sobre nuestra facultad, programas académicos, investigación, eventos, acreditación, infraestructura, bolsa de trabajo y más.</p>
+      </section>
 
         <div className="mt-8 bg-white shadow-md rounded-lg p-6">
           <SubdomainForm />
