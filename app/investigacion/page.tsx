@@ -1,3 +1,4 @@
+// ...existing code...
 export default function InvestigacionPage() {
   return (
     <section className="py-10 max-w-3xl mx-auto">
