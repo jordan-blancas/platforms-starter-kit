@@ -1,28 +1,15 @@
-import Link from 'next/link';
-import { SubdomainForm } from './subdomain-form';
-import { rootDomain } from '@/lib/utils';
+import { LaboratoriosGallery } from './laboratorios-gallery';
+import { laboratorios } from '@/lib/laboratorios';
 
-export default async function HomePage() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-blue-50 to-white p-4 relative">
-      <div className="absolute top-4 right-4">
-        <Link
-          href="/admin"
-          className="text-sm text-gray-500 hover:text-gray-700 transition-colors"
-        >
-          Admin
-        </Link>
-      <section className="flex flex-col items-center justify-center py-10 md:py-16 gap-6 md:gap-8 px-2 sm:px-4 md:px-8 w-full">
-        <img src="https://fieeuncp.edu.pe/wp-content/uploads/2022/09/logo-fiee-uncp.png" alt="Logo FIEE UNCP" className="w-28 h-28 md:w-40 md:h-40 object-contain mb-4" />
-        <h1 className="text-2xl md:text-5xl font-extrabold text-[var(--primary)] text-center mb-2">Facultad de Ingeniería Eléctrica</h1>
-        <h2 className="text-lg md:text-3xl font-semibold text-[var(--secondary)] text-center mb-4">Universidad Nacional del Centro del Perú</h2>
-        <p className="text-base md:text-xl text-center max-w-2xl">Bienvenido al portal institucional de la FIEE-UNCP. Aquí encontrarás información relevante sobre nuestra facultad, programas académicos, investigación, eventos, acreditación, infraestructura, bolsa de trabajo y más.</p>
+    <div className="min-h-[calc(100vh-5rem)] bg-[radial-gradient(circle_at_top,_#eaf5ff,_transparent_55%),linear-gradient(135deg,_#f8fbff,_#fff)] px-4 py-12 sm:px-8 md:py-20">
+      <section className="mx-auto flex max-w-6xl flex-col items-center text-center">
+        <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-[var(--secondary)]">FIEE UNCP</p>
+        <h1 className="max-w-3xl text-4xl font-black tracking-tight text-[var(--primary)] sm:text-6xl">Laboratorios FIEE UNCP</h1>
+        <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">Explora los espacios de formación, investigación e innovación de la Facultad de Ingeniería Eléctrica.</p>
+        <div className="mt-12 w-full"><LaboratoriosGallery laboratorios={laboratorios} /></div>
       </section>
-
-        <div className="mt-8 bg-white shadow-md rounded-lg p-6">
-          <SubdomainForm />
-        </div>
-      </div>
     </div>
   );
 }

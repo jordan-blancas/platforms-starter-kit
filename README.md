@@ -50,7 +50,12 @@ A production-ready example of a multi-tenant application built with Next.js 15, 
    ```
    KV_REST_API_URL=your_redis_url
    KV_REST_API_TOKEN=your_redis_token
+   GOOGLE_DRIVE_API_KEY=your_google_drive_api_key
    ```
+
+   `GOOGLE_DRIVE_API_KEY` permite listar las imágenes públicas de las carpetas de
+   laboratorios en la landing principal. Si no se configura, la landing conserva
+   el enlace para abrir cada carpeta directamente en Drive.
 
 4. Start the development server:
 
